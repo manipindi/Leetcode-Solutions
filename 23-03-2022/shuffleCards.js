@@ -1,3 +1,40 @@
+// There are Y number of students appeared to take an exam, the exam hall contains Y seats labling from number 1 to number Y and I have their respective labling cards(1 to Y), inorder to jumble the students I need to suffle these cards Z times before they are distributing to students, and the suffling should be done by following manner:
+
+// step 1 : take J cards from the set
+
+// step 2 : take another K cards from the set
+
+// step 3 : put the J cards, which you taken in the step 1, back on top of the remaining set
+
+// step 4 : take L cards from the set
+
+// step 5 : put the K cards, which you taken in the step 2, card by card on top of the set
+
+// step 6 :  place the block of L cards on top
+
+// Note: taking a block of cards from the top of the set does not change their order. The entire block is removed in a single move and not card by card. The only exception is step 5, where you return cards one by one from the top.
+
+// Input
+// Y - how many no of students
+
+// Z - how many no of times the cards should shuffle
+
+// Ji, Ki, Li shufling moves in Z times
+
+
+
+// Example
+// Input:
+// 10 2
+// 6 2 2
+// 5 3 6
+
+// Output:
+// 1 2 8 7 3 9 6 5 4 10
+
+
+//solution
+
 let noofStudents = 10;
 
 let studentsList = [];
@@ -67,3 +104,23 @@ for(i=res.length-1; i>=0; i--){
     result.push(res[i])
 }
 console.log(result);
+
+
+// Test Cases :
+// Input:
+// 10 2
+// 6 2 2
+// 5 3 6
+
+// Output:
+// 1 2 8 7 3 9 6 5 4 10
+
+
+// Input:
+// 12 3
+// 2 7 5
+// 4 2 6
+// 3 4 8
+
+// Output:
+// 1 2 10 12 6 5 4 3 9 7 8 11
