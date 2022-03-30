@@ -10,7 +10,7 @@
 // let pattern = "x***x?"
 // let string = "xyxzzxy"
 
-let pattern = "x*y?"
+let pattern = "?*?y"
 let string = "xyxzzxy"
 
 
@@ -26,7 +26,7 @@ function match(pattern, string)
 	}
 		
 
-	if ((pattern.length > 1 && pattern[0] == '?') || (pattern.length != 0 && string.length != 0 &&pattern[0] == string[0])){
+	if ((pattern.length >= 1 && pattern[0] == '?') || (pattern.length != 0 && string.length != 0 &&pattern[0] == string[0])){
 		return match(pattern.substring(1),string.substring(1));
 	}
 
