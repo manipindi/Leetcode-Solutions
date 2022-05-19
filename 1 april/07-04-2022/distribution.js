@@ -1,6 +1,6 @@
 // let childrenAges = [9,5,8,1,4,2,6,8,5,6];
-// let childrenAges = [8, 4, 2, 1, 3, 6, 7, 9, 5];
-let childrenAges = [5,5];
+let childrenAges = [8, 4, 2, 1, 3, 6, 7, 9, 5];
+// let childrenAges = [5,5];
 
 //empty array of size childrenages filled with 1's
 let mangoDistribution = new Array(childrenAges.length).fill(1);
@@ -31,9 +31,10 @@ let distribution = (childrenAges,mangoDistribution) => {
     mangoDistribution.map(mango =>{
         sum += mango;
     })
-    console.log('sum:', sum);
+    console.log(mangoDistribution);
 
-    return mangoDistribution;
+    return sum;
+    
 };
 
 console.log(distribution(childrenAges,mangoDistribution));
